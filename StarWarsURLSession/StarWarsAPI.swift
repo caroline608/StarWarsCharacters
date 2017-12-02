@@ -12,8 +12,9 @@ class StarWarsAPI{
     private init() {}
     static let manager = StarWarsAPI()
     func getCharacters(from urlStr: String,
-                 completionHandler: @escaping (StarWars) -> Void,
+                 completionHandler: @escaping (StarWars) -> Void ,
                  errorHandler: @escaping (Error) -> Void) {
+        print("completion called: \(urlStr)")
         guard let url = URL(string: urlStr) else {return}
         let completion: (Data) -> Void = {(data: Data) in
             do {

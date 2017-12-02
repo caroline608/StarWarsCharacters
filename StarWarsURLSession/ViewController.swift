@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     var starWarsChars: StarWars? {
         didSet{
-            filteredCharacterArr = starWarsChars!.results.filter{$0.name.range(of: searchTerm!, options: .caseInsensitive) != nil}
+            filteredCharacterArr = starWarsChars!.results
         }
     }
     
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     var searchTerm: String? {
         didSet {
-            loadData()
+            loadDataSearch()
         }
     }
     
@@ -29,26 +29,48 @@ class ViewController: UIViewController {
         didSet {
             dump(filteredCharacterArr)
             self.tableView.reloadData()
-
         }
     }
+    
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         searchBar.delegate = self
-        filteredCharacterArr=[ResultsWrapper]()
+        filteredCharacterArr = [ResultsWrapper]()
+        loadData()
     }
     
-    func loadData() {
-        let urlStr = "https://swapi.co/api/people/?search="
+    func loadDataSearch() {
+        let urlStr = "https://swapi.co/api/people/?search=\(searchTerm!)"
         let setCharToOnlineChar: (StarWars) -> Void = {(onlineChar: StarWars) in
             self.starWarsChars = onlineChar
             print("hrewlhfls")
         }
         StarWarsAPI.manager.getCharacters(from: urlStr, completionHandler: setCharToOnlineChar, errorHandler: {print($0)})
     }
+    
+    func loadData() {
+        //var charList = [StarWars]()
+        for num in 1...9 {
+        let urlStr = "https://swapi.co/api/people/?page=\(num)"
+        let setCharToOnlineChar: (StarWars) -> Void = {(onlineChar: StarWars) in
+            //self.starWarsChars = onlineChar
+            //charList.append(onlineChar)
+            self.filteredCharacterArr.append(contentsOf: onlineChar.results)
+            
+            self.tableView.reloadData()
+            //print(charList)
+           
+        }
+         StarWarsAPI.manager.getCharacters(from: urlStr, completionHandler: setCharToOnlineChar, errorHandler: {print($0)})
+            
+        }
+    }
+    
+    
     
 }
 

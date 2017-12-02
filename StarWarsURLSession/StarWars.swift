@@ -9,7 +9,7 @@
 import Foundation
 
 struct StarWars: Codable {
-    let next: String
+    let next: String?
     let results: [ResultsWrapper]
 }
 
