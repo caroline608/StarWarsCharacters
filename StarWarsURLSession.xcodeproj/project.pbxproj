@@ -17,6 +17,7 @@
 		CF86EBFC1FD1F4E600DA7DC2 /* StarWars.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86EBFB1FD1F4E600DA7DC2 /* StarWars.swift */; };
 		CFAD14CD1FD2032C00FE7E4A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD14CC1FD2032C00FE7E4A /* NetworkHelper.swift */; };
 		CFAD14CF1FD2086900FE7E4A /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD14CE1FD2086900FE7E4A /* StarWarsAPI.swift */; };
+		CFAD14D11FD22EF800FE7E4A /* CharDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD14D01FD22EF800FE7E4A /* CharDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CF86EBFB1FD1F4E600DA7DC2 /* StarWars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWars.swift; sourceTree = "<group>"; };
 		CFAD14CC1FD2032C00FE7E4A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		CFAD14CE1FD2086900FE7E4A /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		CFAD14D01FD22EF800FE7E4A /* CharDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				CFAD14CE1FD2086900FE7E4A /* StarWarsAPI.swift */,
 				CFAD14CC1FD2032C00FE7E4A /* NetworkHelper.swift */,
 				CF86EBD11FD1EF5000DA7DC2 /* Main.storyboard */,
+				CFAD14D01FD22EF800FE7E4A /* CharDetailViewController.swift */,
 				CF86EBFB1FD1F4E600DA7DC2 /* StarWars.swift */,
 				CF86EBD41FD1EF5000DA7DC2 /* Assets.xcassets */,
 				CF86EBD61FD1EF5000DA7DC2 /* LaunchScreen.storyboard */,
@@ -273,6 +276,7 @@
 				CF86EBD01FD1EF5000DA7DC2 /* ViewController.swift in Sources */,
 				CF86EBFC1FD1F4E600DA7DC2 /* StarWars.swift in Sources */,
 				CF86EBCE1FD1EF5000DA7DC2 /* AppDelegate.swift in Sources */,
+				CFAD14D11FD22EF800FE7E4A /* CharDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
